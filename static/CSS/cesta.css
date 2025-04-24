@@ -1,0 +1,22 @@
+
+.title{
+    margin-left: 30px;
+}
+
+.postre{
+    width: 150px;
+
+}
+
+.productos{
+    box-shadow: 0 0 10px 0 #000;
+    place-self: center;
+}
+
+.resumen_compra{
+    background-color: #D0C2B6;
+}
+
+hr{
+    color: #f00;
+}
