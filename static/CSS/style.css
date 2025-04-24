@@ -285,7 +285,7 @@ Informacion del postre
     color: #fff;
 }
 
-.btn-agregar:hover{
+.btn_agregar:hover{
     background-color: var(--color-brown-dark);
     color: #e5e4e4;
 }
