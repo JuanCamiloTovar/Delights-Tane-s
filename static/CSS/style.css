@@ -2,10 +2,10 @@
     --color-brown-light: #866556;
     --color-brown: #513528;
     --color-brown-dark: #3d2920;
+    --color-white: #fff;
 }
 
 body{
-    height: 100vh;
     box-sizing: border-box;
     margin: 0;
 }
@@ -20,8 +20,6 @@ body{
 
 .container_bar{
     box-shadow: 0 0px 10px 0px #a19d9d;
-    display: flex;
-    flex-wrap: nowrap;
 }
 
 /* ICONOS DE LA BARRA */
@@ -56,35 +54,34 @@ PAGINA PRINCIPAL
 
 .title{
     font-family: 'Squada one';
-    font-size: 80px;
-    margin: 30px 0px;
+    font-size: 100px;
 }
 
 span{
-    color: #513528;
+    color: var(--color-brown);
 }
 
-p{
+.eslogan{
     font-family: "Barlow semi condensed";
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 400;
-    color: #513528;
+    color: var(--color-brown);
 }
 
 a{
-    color: #fff;
+    color: var(--color-white);
     text-decoration: none;
 }
 
 .button_see_more{
     background-color: var(--color-brown-light);
-    color: #fff;
+    color: var(--color-white);
     padding: 6px 10px;
 }
 
 .button_see_more:hover{
-    background-color: #755445;
-    color: #fff;
+    background-color: var(--color-brown-light);
+    color: var(--color-white);
 }
 
 /* CONTAINER BACKGROUND */
@@ -105,19 +102,7 @@ a{
     bottom: 0;
 }
 
-.cake_straw{
-    bottom: 37%;
-}
-
-.cake_maracu{
-    right: 10%;
-}  
-
 /* Z-INDEX DE LOS ELEMENTOS DE BG */
-
-.elipse_blanca{
-    z-index: 10;
-}
 
 .cake_maracu, .cake_straw{
     z-index: 20;
@@ -131,12 +116,12 @@ a{
 
 .btn_register{
     background-color: var(--color-brown-light);
-    color: #fff;
+    color: var(--color-white);
 }
 
 .btn_register:hover{
     background-color: #755445;
-    color: #fff;
+    color: var(--color-white);
 }
 
 .btn_login{
@@ -147,8 +132,8 @@ a{
 
 .btn_login:hover{
     background-color: #e9e9e9;
-    border: 1px solid #755445;
-    color: #755445;
+    border: 1px solid var(--color-brown-light);
+    color: var(--color-brown-light);
 }
 
 /*
@@ -159,7 +144,7 @@ Postres
 
 /* BARRA DE BUSQUEDA Y BOTON DE BUSCAR */
 
-.search_bar:focus-visible{
+.bar_search:focus-visible{
     border: 1px solid var(--color-brown-light);
     box-shadow: 0 0 10px 0 var(--color-brown-light)
 }
@@ -172,7 +157,7 @@ Postres
 .button_search:hover{
     border: 1px solid var(--color-brown-light);
     background-color: var(--color-brown-light);
-    color: #fff;
+    color: var(--color-white);
 }
 
 .card-body{
@@ -285,7 +270,7 @@ Informacion del postre
     color: #fff;
 }
 
-.btn-agregar:hover{
+.btn_agregar:hover{
     background-color: var(--color-brown-dark);
     color: #e5e4e4;
 }
@@ -295,10 +280,6 @@ Informacion del postre
 Cesta
 ================================================================ 
 */
-
-.title{
-    margin-left: 30px;
-}
 
 .postre{
     width: 150px;
@@ -339,12 +320,13 @@ hr{
     }
 
     .container_bg{
-        height: 57.3vh;
+        position: absolute;
+        bottom: 0;
     }
 
     .cake_straw{
         width: 250px;
-        bottom: 37%;
+        bottom: 150px;
     }
     
     .cake_maracu{
@@ -361,7 +343,7 @@ hr{
         z-index: 10;
     }
 
-        /*
+    /*
     ================================================================
     Postres
     ================================================================ 
@@ -405,12 +387,13 @@ hr{
     }
 
     .container_bg{
-        height: 64.5vh;
+        position: absolute;
+        bottom: 0;
     }
 
     .cake_straw{
         width: 280px;
-        bottom: 37%;
+        bottom: 180px;
     }
     
     .cake_maracu{
@@ -458,12 +441,13 @@ hr{
     }
 
     .container_bg{
-        height: 53.7vh;
+        position: absolute;
+        bottom: 0;
     }
     
     .cake_straw{
         width: 300px;
-        bottom: 37%;
+        bottom: 180px;
     }
     
     .cake_maracu{
@@ -514,6 +498,7 @@ hr{
 
     .logo{
         cursor: pointer;
+        width: 230px;
     }
 
     .icons, .home_icon{
@@ -522,6 +507,7 @@ hr{
 
     li{
         margin: 0 10px;
+        font-size: 20px;
     }
 
     .container_buttons{
@@ -529,29 +515,31 @@ hr{
     }
 
     .button_see_more, .btn_register, .btn_login{
-        font-size: 15px;
+        font-size: 20px;
     }
 
+    
     .container_bg{
-        height: 57.5vh;
+        position: absolute;
+        bottom: 0;
     }
 
     .cake_straw{
-        width: 330px;
-        bottom: 37%;
+        width: 400px;
+        bottom: 230px;
     }
     
     .cake_maracu{
-        width: 360px;
+        width: 430px;
         right: 10%;
     }  
     
     .elipse_marron{
-        width: 400px;
+        width: 460px;
     }
 
     .elipse_blanca{
-        width: 340px;
+        width: 400px;
         z-index: 10;
     }
 
@@ -561,18 +549,50 @@ hr{
     ================================================================ 
     */
 
+    /* TITULO DE LA SECCION POSTRES */
+    
+    .tit_postre{
+        margin: 50px 0;
+    }
+    
+    /* BARRA DE BUSQUEDA DE POSTRES MAS EL BOTON BUSCAR */
+
+    .bar_search{
+        height: 50px;
+        padding: 12px 8px;
+        font-size: 15px;
+        border: 1px solid var(--color-brown);
+    }
+    
+    .bar_search::placeholder{
+        font-size: 18px;
+        color: var(--color-brown);
+    }
+    
+    .button_search{
+        width: 100px;
+        font-size: 18px;
+    }
+    
     /* CONTAINER DONDE SE ENCUENTRAN LAS TARJETAS DE LOS POSTRES */
 
     .container_cards{
-        margin-top: 30px;
+        margin-top: 50px;
+        padding: 20px;
     }
     
     /* TARJETA CON IMAGEN Y PRECIO */
     
     .card{
-        width: 12rem;
+        width: 15rem;
         margin-bottom: 20px;
         cursor: pointer;
+        transition: scale 0.3s ease-in-out;
+        flex-grow: 1;
+    }
+
+    .card:hover{
+        scale: 1.1;
     }
 
     /*
@@ -585,3 +605,5 @@ hr{
         width: 300px;
     }
 }
+
+/* REALIZAR MODIFICACION DE TODAS LAS PAGINAS DESPUES DE LOS 900PX */
