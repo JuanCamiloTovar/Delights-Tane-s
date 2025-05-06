@@ -14,6 +14,9 @@ body{
 
 .nav_bar{
     padding: 0;
+    position: sticky;
+    z-index: 30;
+    top: 0;
 }
 
 /* CONTAINER DE LA BARRA */
@@ -54,7 +57,7 @@ PAGINA PRINCIPAL
 
 .title{
     font-family: 'Squada one';
-    font-size: 100px;
+    font-size: 80px;
 }
 
 span{
@@ -190,15 +193,14 @@ Informacion del postre
 
 /* CONTAINER CON EL TITULO DESCRIPCION DEL POSTRE Y SU RESPECTIVA IMAGEN */
 
-.container_main{
-    margin: auto;
+.container_left{
+    margin-top: 40px;
     position: relative;
-    height: 450px;
+    height: 100vh;
 }
 
 .title_info_postre{
     position: relative;
-    margin-left: 40px;
     z-index: 20;
 }
 
@@ -206,9 +208,9 @@ Informacion del postre
     width: 200px;
     height: 120px;
     text-align: justify;
-    position: inherit;
+    position: relative;
     left: 80px;
-    z-index: 30;
+    z-index: 20;
 }
 
 .elipse{
@@ -218,14 +220,6 @@ Informacion del postre
     top: 55px;
     z-index: 10;
 
-}
-
-.img_postre{
-    width: 100px;
-    position: absolute;
-    left: 350px;
-    top: 140px;
-    z-index: 20;
 }
 
 
@@ -238,18 +232,20 @@ Informacion del postre
 }
 
 .accordion{
-    margin: auto;
     width: 500px;
+    box-shadow: 0 0 10px 0 var(--color-brown);
 }
 
 .accordion-body{
     width: 500px;
+    border-radius: 14px;
 }
 
 .accordion-button{
     border: 1px solid var(--color-brown-light);
     color: var(--color-brown-light);
     font-weight: 400;
+    border-radius: 8px;
 }
 
 .accordion-button:not(.collapsed){
@@ -265,7 +261,6 @@ Informacion del postre
 
 .btn_agregar{
     width: 200px;
-    margin: auto;
     background: var(--color-brown);
     color: #fff;
 }
@@ -498,7 +493,6 @@ hr{
 
     .logo{
         cursor: pointer;
-        width: 230px;
     }
 
     .icons, .home_icon{
@@ -507,17 +501,11 @@ hr{
 
     li{
         margin: 0 10px;
-        font-size: 20px;
     }
 
     .container_buttons{
         order: 1;
     }
-
-    .button_see_more, .btn_register, .btn_login{
-        font-size: 20px;
-    }
-
     
     .container_bg{
         position: absolute;
@@ -525,12 +513,12 @@ hr{
     }
 
     .cake_straw{
-        width: 400px;
+        width: 370px;
         bottom: 230px;
     }
     
     .cake_maracu{
-        width: 430px;
+        width: 400px;
         right: 10%;
     }  
     
@@ -558,20 +546,13 @@ hr{
     /* BARRA DE BUSQUEDA DE POSTRES MAS EL BOTON BUSCAR */
 
     .bar_search{
-        height: 50px;
-        padding: 12px 8px;
         font-size: 15px;
         border: 1px solid var(--color-brown);
     }
     
     .bar_search::placeholder{
-        font-size: 18px;
+        font-size: 15px;
         color: var(--color-brown);
-    }
-    
-    .button_search{
-        width: 100px;
-        font-size: 18px;
     }
     
     /* CONTAINER DONDE SE ENCUENTRAN LAS TARJETAS DE LOS POSTRES */
@@ -584,7 +565,7 @@ hr{
     /* TARJETA CON IMAGEN Y PRECIO */
     
     .card{
-        width: 15rem;
+        width: 14rem;
         margin-bottom: 20px;
         cursor: pointer;
         transition: scale 0.3s ease-in-out;
@@ -601,8 +582,75 @@ hr{
     ================================================================ 
     */
 
-    .img_postre{
-        width: 300px;
+    .container_main{
+        display: grid;
+        grid-template-columns: 50% 40%;
+        align-items: center;
+    }
+
+    .container_left{ 
+        margin-top: 20px;
+        position: relative;
+        height: 100vh;
+    }
+    
+    .title_info_postre{
+        position: relative;
+        left: 150px;
+        z-index: 20;
+    }
+    
+    .content_dissert{
+        width: 350px;
+        font-size: 25px;
+        font-family: "Barlow semi condensed";
+        color: var(--color-brown-dark);
+        left: 150px;
+        top: 60px;
+    }
+    
+    .elipse{
+        width: 800px;
+        left: -50px;
+        top: 40px;
+        z-index: 10;
+    }
+    
+    .container_right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container_postres{
+        position: relative;
+    }
+
+    .postre_1{
+        max-width: 530px;
+        position: relative;
+        top: 50px;
+        z-index: 20;
+    }
+    
+    .postre_2{
+        max-width: 450px;
+        position: absolute;
+        top: -40px;
+        left: 160px;
+        z-index: 10;
+    }
+
+    .accordion, .btn_agregar{
+        position: relative;
+        z-index: 10;
+        margin: 25px 0;
+    }
+
+    .footer{
+        background: var(--color-brown-light);
+        height: 50vh;
+
     }
 }
 

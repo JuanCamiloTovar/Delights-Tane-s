@@ -58,32 +58,43 @@
         </div>
     </nav>
 
-    <!-- CONTAINER CON EL TITULO DESCRIPCION DEL POSTRE Y SU RESPECTIVA IMAGEN -->
-    <section class="container_main">
-        <h1 class="title title_info_postre"><span>Postre Napoleón</span></h1>
-        <img src="static/IMAGENES/Ellipse info.svg" alt="" class="elipse">
-        <p class="content_dissert">
-            Postre de crema de leche sabor arequipe con capas de galleta y cobertura de canela, siente la excelente combinación de sabores en cada cucharada.
-        </p>
-        <img src="static/IMAGENES/postre_napoleon_mejor_calidadpng.png" alt="Postre Napoleon" class="img_postre" width="200px">
-    </section>
+    <!-- GRID PARA DIVIDIR LA PANTALLA EN DOS -->
 
-    <!-- ACORDION CON DETALLES DEL POSTRE -->
-
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    Desplegar para ver la Información Nutricional
-                </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                    Buscar en internet como hallar la informacion nutricional de los postres para introducirla
+    <div class="container_main">
+        <!-- CONTAINER CON EL TITULO DESCRIPCION DEL POSTRE Y SU RESPECTIVA IMAGEN -->
+        <section class="container_left">
+            <h1 class="title title_info_postre"><span>Postre Napoleón</span></h1>
+            <img src="static/IMAGENES/Ellipse info.svg" alt="" class="elipse">
+            <p class="content_dissert">
+                Postre de crema de leche sabor arequipe con capas de galleta y cobertura de canela, siente la excelente combinación de sabores en cada cucharada.
+            </p>
+        </section>
+        
+        <!-- ACORDION CON DETALLES DEL POSTRE -->
+        <div class="container_right">
+            <div class="container_postres">
+                <img src="static/IMAGENES/postre_napoleon_mejor_calidadpng.png" alt="Postre Napoleon" class="img_postre postre_1">
+                <img src="static/IMAGENES/postre_napoleon_mejor_calidadpng.png" alt="Postre Napoleon" class="img_postre postre_2">
+            </div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Desplegar para ver la Información Nutricional
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            Buscar en internet como hallar la informacion nutricional de los postres para introducirla
+                        </div>
+                    </div>
                 </div>
             </div>
+            <button type="button" class="btn btn_agregar">Agregame a la cesta!!</button>
         </div>
     </div>
-    <button type="button" class="btn btn_agregar">Agregame a la cesta!!</button>
+    <footer class="footer">
+        
+    </footer>
 </body>
 </html>
