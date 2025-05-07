@@ -10,9 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Squada+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/CSS/style.css">
+    <script src="static/JS/script.js"></script>
     <title>Delights Tane's</title>
 </head>
-<body class="">
+<body class="body_cesta">
     <!-- BARRA DE NAVEGACION -->
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary nav_bar">
@@ -61,34 +62,44 @@
     </div>
     <div class="container text-center productos">
         <div class="row">
-            <div class="col">
+            <div class="col_left col">
                 <img class="postre" src="static/IMAGENES/postre_napoleon_mejor_calidadpng.png" alt="">
             </div>
-            <div class="col">
-                <div class="row">
-                    <div class="col">
-                        Nombre postre
-                    </div>
+            <div class="col_center col">
+                
+                <div class="nombre_postre">
+                    Postre Napoleon
                 </div>
-                <div class="row">
-                    <div class="col">
-                        Eliminar
-                    </div>
-                    <div class="col">
-                        Contador
-                    </div>
-                </div>
+
+                <button type="button" class="btn btn_eliminar">Eliminar</button>
+                <form action="">
+                    <input type="number" name="" id="" min="0" class="contador" onclick="prueba()">
+                </form>
             </div>
-            <div class="col">
-                precio del producto
+            <div class="col_right col">
+                $ 7000 COL
             </div>
         </div>
     </div>
 
-    <!-- <div class="resumen_compra">
+
+    <div class="container resumen_compra">
         <h5 class=""><span>Resumen de la compra</span></h5>
         <hr>
-        Productos
-    </div> -->
+        <div class="container_secction">
+            <div class="secction_left">
+                <p>Productos</p>
+                <p>Envio</p>
+                <p>Total</p>
+            </div>
+            <div class="secction_right">
+                <p class="precio_productos">$ 0 COL</p>
+                <p>$ 5000 COL</p>
+                <p class="total">$ 5000 COL</p>
+            </div>
+        </div>
+        <button type="button"></button>
+    </div>
+
 </body>
 </html>

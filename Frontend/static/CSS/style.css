@@ -283,7 +283,8 @@ Cesta
 
 .productos{
     box-shadow: 0 0 10px 0 #000;
-    place-self: center;
+    border-radius: 8px;
+    min-width: 50%;
 }
 
 .resumen_compra{
@@ -291,7 +292,7 @@ Cesta
 }
 
 hr{
-    color: #f00;
+    color: var(--color-brown-dark);
 }
 
 /* MEDIA QUERY USADO CUANDO LA PANTALLA MIDE MENOS DE 409PX */
@@ -650,8 +651,85 @@ hr{
     .footer{
         background: var(--color-brown-light);
         height: 50vh;
+    }
 
+    /*
+    ================================================================
+    Cesta
+    ================================================================ 
+    */
+
+    .productos{
+        max-width: 75%;
+    }
+
+    .col{
+        align-content: center;
+    }
+
+    .col_center{
+        position: relative;
+    }
+
+    .nombre_postre{
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--color-brown);
+        position: absolute;
+        top: 15px;
+        left: 0;
+    }
+
+    .btn_eliminar{
+        font-family: "Barlow semi condensed";
+        font-size: 17px;
+        font-weight: bold;
+        color: #757575;
+        position: absolute;
+        left: 0;
+    }
+
+    .btn_eliminar:hover{
+        color: #555555;
+    }
+
+    .contador{
+        width: 60px;
+        height: 20px;
+        position: absolute;
+        left: 100px;
+        top: 65px;
+    }
+
+    .col_right{
+        font-family: "Barlow semi condensed";
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--color-brown);
+    }
+
+    .body_cesta{
+        position: relative;
+        height: 100vh;
+    }
+
+    .resumen_compra{
+        width: 75%;
+        padding: 20px 30px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .container_secction{
+        display: flex;
+        justify-content: space-between;
     }
 }
+
+
 
 /* REALIZAR MODIFICACION DE TODAS LAS PAGINAS DESPUES DE LOS 900PX */

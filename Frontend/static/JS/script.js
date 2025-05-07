@@ -10,3 +10,11 @@ function home(){
 function Information_napoleon() {
     location.href="info_napoleon.html"
 }
+
+function prueba(){
+    document.addEventListener("keydown", function (event) {
+        if (event.key == "Enter"){
+            alert("Cristhian es el programador mas gay")
+        } 
+    })
+}
