@@ -14,24 +14,7 @@ def conectar(vhost, vuser, vpass, vdb):
 @app.route("/", methods=["GET"])
 def cesta():
     try:
-        conn = conectar('localhost','root','290307','ejemplo_postres')
-        cur = conn.cursor()
-        cur.execute("SELECT * FROM postres WHERE id = 1")
-        datos = cur.fetchone()
-        cur.close()
-        conn.close()
-        
-        if datos:
-            dato = {
-                'id': datos[0],
-                'nombre': datos[1],
-                'precio': datos[2],
-                'descripcion': datos[3]
-            }
-            print(dato)
-            return jsonify(dato)
-        else: 
-            return jsonify({'mensaje': 'Registro no encontrado'})
+        return render_template("cesta.html")
         
     except Exception as err:
         print(err)
