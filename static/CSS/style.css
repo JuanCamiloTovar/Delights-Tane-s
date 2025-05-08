@@ -714,9 +714,12 @@ hr{
     }
 
     .resumen_compra{
-        width: 75%;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
         padding: 20px 30px;
         margin-bottom: 20px;
+        border: 1px solid #513528;
         border-radius: 8px;
         position: absolute;
         bottom: 0;
@@ -727,6 +730,23 @@ hr{
     .container_secction{
         display: flex;
         justify-content: space-between;
+        color: #564242;
+        font-weight: 600;
+    }
+    
+    .total{
+        font-weight: 900;
+    }
+
+    .btn_continuar_compra{
+        margin: auto;
+        background-color: var(--color-brown);
+        color: var(--color-white);
+    }
+
+    .btn_continuar_compra:hover{
+        background-color: var(--color-brown-dark);
+        color: #c4c4c4;
     }
 }
 

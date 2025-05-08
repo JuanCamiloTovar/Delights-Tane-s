@@ -72,9 +72,8 @@
                 </div>
 
                 <button type="button" class="btn btn_eliminar">Eliminar</button>
-                <form action="">
-                    <input type="number" name="" id="" min="0" class="contador" onclick="prueba()">
-                </form>
+                <input type="number" id="contador" class="contador" placeholder="1" onclick="submit_enter()" min="1" oninput = "this.value = Math.abs(this.value)">
+                
             </div>
             <div class="col_right col">
                 $ 7000 COL
@@ -90,16 +89,15 @@
             <div class="secction_left">
                 <p>Productos</p>
                 <p>Envio</p>
-                <p>Total</p>
+                <p class="total">Total</p>
             </div>
             <div class="secction_right">
-                <p class="precio_productos">$ 0 COL</p>
+                <p id="precio_productos" class="precio_productos">$ 0 COL</p>
                 <p>$ 5000 COL</p>
-                <p class="total">$ 5000 COL</p>
+                <p id="total" class="total">$ 0 COL</p>
             </div>
         </div>
-        <button type="button"></button>
+        <button type="button" class="btn btn_continuar_compra">Consultar Compra</button>
     </div>
-
 </body>
 </html>
