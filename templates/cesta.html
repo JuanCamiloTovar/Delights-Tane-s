@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Squada+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/CSS/style.css">
-    <script src="static/JS/script.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js"></script>
     <title>Delights Tane's</title>
 </head>
 <body class="body_cesta">
@@ -22,12 +22,14 @@
 
         <div class="container-fluid container_bar ">
 
-            <img src="static/IMAGENES/logo.svg" alt="" class="logo" onclick="home()">
+            <a href="{{ url_for ('index') }}">
+                <img src="/static/IMAGENES/logo.svg" alt="" class="logo">
+            </a>
 
             <!-- BUTTON PARA DESPLEGAR OPCIONES -->
 
             <button class="navbar-toggler btn-logo" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="static/IMAGENES/logo.svg" alt="" class="btn-logo"></span>
+                <img src="/static/IMAGENES/logo.svg" alt="" class="btn-logo"></span>
             </button>
 
             <div class="container_buttons">
@@ -40,20 +42,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item home_icon">
-                        <a class="nav-link" href="index.html"> <img src="static/IMAGENES/home icon.svg" alt="" class="icons"> Home</a>
+                        <a class="nav-link" href="{{ url_for ('index') }}"> <img src="/static/IMAGENES/home icon.svg" alt="" class="icons"> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="postres.html"> <img src="static/IMAGENES/dissert icon.svg" alt="" class="icons"> Postres</a>
+                        <a class="nav-link" href="{{ url_for ('postres') }}"> <img src="/static/IMAGENES/dissert icon.svg" alt="" class="icons"> Postres</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> <img src="static/IMAGENES/car icon.svg" alt="" class="icons"> Cesta</a>
+                        <a class="nav-link" href="{{ url_for ('cesta') }}"> <img src="/static/IMAGENES/car icon.svg" alt="" class="icons"> cesta</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> <img src="static/IMAGENES/noti icon.svg" alt=""  class="icons"> Anuncios</a>
+                        <a class="nav-link" href="#"> <img src="/static/IMAGENES/noti icon.svg" alt=""  class="icons"> Anuncios</a>
                     </li>
                 </ul>
             </div>
-            
         </div>
     </nav>
     
@@ -63,20 +64,20 @@
     <div class="container text-center productos">
         <div class="row">
             <div class="col_left col">
-                <img class="postre" src="static/IMAGENES/postre_napoleon_mejor_calidadpng.png" alt="">
+                <img class="postre" src="/static/IMAGENES/postre_napoleon_mejor_calidadpng.png" alt="">
             </div>
             <div class="col_center col">
                 
                 <div class="nombre_postre">
-                    Postre Napoleon
+                    {{ postre.nombre }}
                 </div>
-
-                <button t ype="button" class="btn btn_eliminar">Eliminar</button>
-                <input type="number" id="contador" class="contador" placeholder="1" onclick="submit_enter()" min="1" oninput = "this.value = Math.abs(this.value)">
-                
+                <button type="button" class="btn btn_eliminar">Limpiar</button>
+                <form action="" method="get">
+                    <input type="number" id="contador" name="contador" class="contador" placeholder="{{ cantidad }}" min="1" oninput = "this.value = Math.abs(this.value)  ">
+                </form>
             </div>
             <div class="col_right col">
-                $ 7000 COL
+                $ {{ postre.precio }} COL
             </div>
         </div>
     </div>
@@ -92,9 +93,9 @@
                 <p class="total">Total</p>
             </div>
             <div class="secction_right">
-                <p id="precio_productos" class="precio_productos">$ 0 COL</p>
+                <p id="precio_productos" class="precio_productos">$ {{ productos }} COL</p>
                 <p>$ 5000 COL</p>
-                <p id="total" class="total">$ 0 COL</p>
+                <p id="total" class="total">$ {{ total }} COL</p>
             </div>
         </div>
         <button type="button" class="btn btn_continuar_compra">Continuar Compra</button>

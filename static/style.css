@@ -1,0 +1,754 @@
+:root{
+    --color-brown-light: #866556;
+    --color-brown: #513528;
+    --color-brown-dark: #3d2920;
+    --color-white: #fff;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* BARRA DE NAVEGACION */
+
+.nav_bar{
+    padding: 0;
+    position: sticky;
+    z-index: 30;
+    top: 0;
+}
+
+/* CONTAINER DE LA BARRA */
+
+.container_bar{
+    box-shadow: 0 0px 10px 0px #a19d9d;
+}
+
+/* ICONOS DE LA BARRA */
+
+.icons{
+    margin-right: 10px;
+}
+
+li{
+    font-weight: bold;
+}
+
+.btn-logo{
+    display: block;
+    padding: 0;
+    border: none;
+    width: 140px;
+}
+
+/*
+================================================================
+PAGINA PRINCIPAL 
+================================================================ 
+*/
+
+/* TITULO Y ESLOGAN DE LA PAGINA y BOTON VER MAS */
+
+.container_title{
+    margin: 20px 30px;
+    text-shadow: 0 2px 30px #b2afad;
+}
+
+.title{
+    font-family: 'Squada one';
+    font-size: 80px;
+}
+
+span{
+    color: var(--color-brown);
+}
+
+.eslogan{
+    font-family: "Barlow semi condensed";
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--color-brown);
+}
+
+a{
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.button_see_more{
+    background-color: var(--color-brown-light);
+    color: var(--color-white);
+    padding: 6px 10px;
+}
+
+.button_see_more:hover{
+    background-color: var(--color-brown-light);
+    color: var(--color-white);
+}
+
+/* CONTAINER BACKGROUND */
+
+.container_bg{
+    width: 100%;
+    position: relative;
+}
+
+.items_bg{
+    position: absolute;
+}
+
+/* POSITION DE LOS ELEMENTOS DE BG */
+
+.elipse_marron, .elipse_blanca, .cake_maracu ,.cake_straw{
+    right: 0;
+    bottom: 0;
+}
+
+/* Z-INDEX DE LOS ELEMENTOS DE BG */
+
+.cake_maracu, .cake_straw{
+    z-index: 20;
+}
+
+.btn{
+    font-family: "Barlow semi condensed";
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.btn_register{
+    background-color: var(--color-brown-light);
+    color: var(--color-white);
+}
+
+.btn_register:hover{
+    background-color: #755445;
+    color: var(--color-white);
+}
+
+.btn_login{
+    background-color: transparent;
+    border: 1px solid var(--color-brown-light);
+    color: var(--color-brown-light);
+}
+
+.btn_login:hover{
+    background-color: #e9e9e9;
+    border: 1px solid var(--color-brown-light);
+    color: var(--color-brown-light);
+}
+
+/*
+================================================================
+Postres 
+================================================================ 
+*/
+
+/* BARRA DE BUSQUEDA Y BOTON DE BUSCAR */
+
+.bar_search:focus-visible{
+    border: 1px solid var(--color-brown-light);
+    box-shadow: 0 0 10px 0 var(--color-brown-light)
+}
+
+.button_search{
+    border: 1px solid var(--color-brown-light);
+    color: var(--color-brown-light);
+}
+
+.button_search:hover{
+    border: 1px solid var(--color-brown-light);
+    background-color: var(--color-brown-light);
+    color: var(--color-white);
+}
+
+.card-body{
+    padding: 5px 0;
+}
+
+.card-text{
+    font-weight: 600;
+    padding: 0;
+}
+
+/* CARD FOOTER */
+/* LE COLOCA EL ESTILO A LOS PRECIOS DE LOS POSTRES */
+.card > .card-body > p span{
+    font-weight: bold;
+    color: #513528;
+    }
+
+/*
+================================================================
+Informacion del postre
+================================================================ 
+*/
+
+.body_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* CONTAINER CON EL TITULO DESCRIPCION DEL POSTRE Y SU RESPECTIVA IMAGEN */
+
+.container_left{
+    margin-top: 40px;
+    position: relative;
+    height: 100vh;
+}
+
+.title_info_postre{
+    position: relative;
+    z-index: 20;
+}
+
+.content_dissert{
+    width: 200px;
+    height: 120px;
+    text-align: justify;
+    position: relative;
+    left: 80px;
+    z-index: 20;
+}
+
+.elipse{
+    width: 380px;
+    position: absolute;
+    left: 0;
+    top: 55px;
+    z-index: 10;
+
+}
+
+
+/*  ACORDION CON DETALLES DEL POSTRE */
+
+.title_h2{
+    font-family: "Squada one";
+    font-size: 35px;
+    margin-left: 40px;
+}
+
+.accordion{
+    width: 500px;
+    box-shadow: 0 0 10px 0 var(--color-brown);
+}
+
+.accordion-body{
+    width: 500px;
+    border-radius: 14px;
+}
+
+.accordion-button{
+    border: 1px solid var(--color-brown-light);
+    color: var(--color-brown-light);
+    font-weight: 400;
+    border-radius: 8px;
+}
+
+.accordion-button:not(.collapsed){
+    color: #fff;
+    background-color: var(--color-brown-light);
+}
+
+.accordion-button:focus{
+    box-shadow: none;
+}
+
+/* BUTTON AGREGAR */
+
+.btn_agregar{
+    width: 200px;
+    background: var(--color-brown);
+    color: #fff;
+}
+
+.btn_agregar:hover{
+    background-color: var(--color-brown-dark);
+    color: #e5e4e4;
+}
+
+/*
+================================================================
+cesta
+================================================================ 
+*/
+
+.postre{
+    width: 150px;
+}
+
+.productos{
+    box-shadow: 0 0 10px 0 #000;
+    border-radius: 8px;
+    width: 50%;
+}
+
+.resumen_compra{
+    background-color: #D0C2B6;
+}
+
+hr{
+    color: var(--color-brown-dark);
+}
+
+/* MEDIA QUERY USADO CUANDO LA PANTALLA MIDE MENOS DE 409PX */
+
+@media (max-width: 409px){
+    .logo{
+        display: none;
+    }
+
+    /* TITULO Y ESLOGAN DE LA PAGINA */
+
+    .title{
+        font-size: 60px;
+        margin: 0;
+    }
+    
+    .eslogan{
+        font-family: "Barlow semi condensed";
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .container_bg{
+        position: absolute;
+        bottom: 0;
+    }
+
+    .cake_straw{
+        width: 250px;
+        bottom: 150px;
+    }
+    
+    .cake_maracu{
+        width: 280px;
+        right: 10%;
+    }  
+    
+    .elipse_marron{
+        width: 320px;
+    }
+
+    .elipse_blanca{
+        width: 260px;
+        z-index: 10;
+    }
+
+    /*
+    ================================================================
+    Postres
+    ================================================================ 
+    */
+
+    .container_cards{
+        margin-top: 20px;
+    }
+    
+    /* TARJETA CON IMAGEN Y PRECIO */
+    
+    .card{
+        width: 9.5rem;
+        margin-bottom: 20px;
+        
+    }
+    
+    .search_bar::placeholder{
+        font-size: 12px;
+    }
+}
+
+/* MEDIA QUERY USADO CUANDO LA PANTALLA MIDE MAS DE 409PX Y MENOS DE 526PX */
+
+@media (min-width: 409px) and (max-width: 526px){
+    .logo{
+        display: none;
+    }
+
+    /* TITULO Y ESLOGAN DE LA PAGINA */
+
+    .title{
+        font-size: 60px;
+        margin: 0;
+    }
+    
+    .eslogan{
+        font-family: "Barlow semi condensed";
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .container_bg{
+        position: absolute;
+        bottom: 0;
+    }
+
+    .cake_straw{
+        width: 280px;
+        bottom: 180px;
+    }
+    
+    .cake_maracu{
+        width: 310px;
+        right: 10%;
+    }  
+    
+    .elipse_marron{
+        width: 350px;
+    }
+
+    .elipse_blanca{
+        width: 290px;
+        z-index: 10;
+    }
+
+        /*
+    ================================================================
+    Postres
+    ================================================================ 
+    */
+
+    .container_cards{
+        margin-top: 20px;
+    }
+    
+    /* TARJETA CON IMAGEN Y PRECIO */
+    
+    .card{
+        width: 9.5rem;
+        margin-bottom: 20px;
+        
+    }
+    
+    .search_bar::placeholder{
+        font-size: 12px;
+    }
+}
+
+/* MEDIA QUERY USADO CUANDO LA PANTALLA MIDE MAS DE 526PX Y MENOS DE 990PX */
+
+@media (min-width: 526px) and (max-width: 990px){
+    .logo{
+        display: none;
+    }
+
+    .container_bg{
+        position: absolute;
+        bottom: 0;
+    }
+    
+    .cake_straw{
+        width: 300px;
+        bottom: 180px;
+    }
+    
+    .cake_maracu{
+        width: 330px;
+        right: 10%;
+    }  
+    
+    .elipse_marron{
+        width: 370px;
+    }
+
+    .elipse_blanca{
+        width: 310px;
+        z-index: 10;
+    }
+
+        /*
+    ================================================================
+    Postres
+    ================================================================ 
+    */
+
+    .container_cards{
+        margin-top: 20px;
+    }
+    
+    /* TARJETA CON IMAGEN Y PRECIO */
+    
+    .card{
+        width: 9.5rem;
+        margin-bottom: 20px;
+        
+    }
+    
+    .search_bar::placeholder{
+        font-size: 12px;
+    }
+}
+
+/* MEDIA QUERY USADO CUADNO LA PANTALLA MIDE MAS DE 990 PX */
+
+@media (min-width: 990px) {
+    /*
+    ================================================================
+    Pagina principal
+    ================================================================ 
+    */
+
+    .logo{
+        cursor: pointer;
+    }
+
+    .icons, .home_icon{
+        display: none;
+    }
+
+    li{
+        margin: 0 10px;
+    }
+
+    .container_buttons{
+        order: 1;
+    }
+    
+    .container_bg{
+        position: absolute;
+        bottom: 0;
+    }
+
+    .cake_straw{
+        width: 370px;
+        bottom: 230px;
+    }
+    
+    .cake_maracu{
+        width: 400px;
+        right: 10%;
+    }  
+    
+    .elipse_marron{
+        width: 460px;
+    }
+
+    .elipse_blanca{
+        width: 400px;
+        z-index: 10;
+    }
+
+    /*
+    ================================================================
+    Postres
+    ================================================================ 
+    */
+
+    /* TITULO DE LA SECCION POSTRES */
+    
+    .tit_postre{
+        margin: 50px 0;
+    }
+    
+    /* BARRA DE BUSQUEDA DE POSTRES MAS EL BOTON BUSCAR */
+
+    .bar_search{
+        font-size: 15px;
+        border: 1px solid var(--color-brown);
+    }
+    
+    .bar_search::placeholder{
+        font-size: 15px;
+        color: var(--color-brown);
+    }
+    
+    /* CONTAINER DONDE SE ENCUENTRAN LAS TARJETAS DE LOS POSTRES */
+
+    .container_cards{
+        margin-top: 50px;
+        padding: 20px;
+    }
+    
+    /* TARJETA CON IMAGEN Y PRECIO */
+    
+    .card{
+        width: 14rem;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: scale 0.3s ease-in-out;
+        flex-grow: 1;
+    }
+
+    .card:hover{
+        scale: 1.1;
+    }
+
+    /*
+    ================================================================
+    Informacion del postre
+    ================================================================ 
+    */
+
+    .container_main{
+        display: grid;
+        grid-template-columns: 50% 40%;
+        align-items: center;
+    }
+
+    .container_left{ 
+        margin-top: 20px;
+        position: relative;
+        height: 100vh;
+    }
+    
+    .title_info_postre{
+        position: relative;
+        left: 150px;
+        z-index: 20;
+    }
+    
+    .content_dissert{
+        width: 350px;
+        font-size: 25px;
+        font-family: "Barlow semi condensed";
+        color: var(--color-brown-dark);
+        left: 150px;
+        top: 60px;
+    }
+    
+    .elipse{
+        width: 800px;
+        left: -50px;
+        top: 40px;
+        z-index: 10;
+    }
+    
+    .container_right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container_postres{
+        position: relative;
+    }
+
+    .postre_1{
+        max-width: 530px;
+        position: relative;
+        top: 50px;
+        z-index: 20;
+    }
+    
+    .postre_2{
+        max-width: 450px;
+        position: absolute;
+        top: -40px;
+        left: 160px;
+        z-index: 10;
+    }
+
+    .accordion, .btn_agregar{
+        position: relative;
+        z-index: 10;
+        margin: 25px 0;
+    }
+
+    .footer{
+        background: var(--color-brown-light);
+        height: 50vh;
+    }
+
+    /*
+    ================================================================
+    cesta
+    ================================================================ 
+    */
+
+    .productos{
+        max-width: 75%;
+    }
+
+    .col{
+        align-content: center;
+    }
+
+    .col_center{
+        position: relative;
+    }
+
+    .nombre_postre{
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--color-brown);
+        position: absolute;
+        top: 15px;
+        left: 0;
+    }
+
+    .btn_eliminar{
+        font-family: "Barlow semi condensed";
+        font-size: 17px;
+        font-weight: bold;
+        color: #757575;
+        position: absolute;
+        left: 0;
+    }
+
+    .btn_eliminar:hover{
+        color: #555555;
+    }
+
+    .contador{
+        width: 60px;
+        height: 20px;
+        position: absolute;
+        left: 100px;
+        top: 65px;
+    }
+
+    .col_right{
+        font-family: "Barlow semi condensed";
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--color-brown);
+    }
+
+    .body_cesta{
+        position: relative;
+        height: 100vh;
+    }
+
+    .resumen_compra{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 20px 30px;
+        margin-bottom: 20px;
+        border: 1px solid #513528;
+        border-radius: 8px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .container_secction{
+        display: flex;
+        justify-content: space-between;
+        color: #564242;
+        font-weight: 600;
+    }
+    
+    .total{
+        font-weight: 900;
+    }
+
+    .btn_continuar_compra{
+        margin: auto;
+        background-color: var(--color-brown);
+        color: var(--color-white);
+    }
+
+    .btn_continuar_compra:hover{
+        background-color: var(--color-brown-dark);
+        color: #c4c4c4;
+    }
+}
+
+
+
+/* REALIZAR MODIFICACION DE TODAS LAS PAGINAS DESPUES DE LOS 900PX */
